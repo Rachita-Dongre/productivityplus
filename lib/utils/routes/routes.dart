@@ -5,4 +5,5 @@ class MyRoutes {
   static String homeRoute = "/home";
   static String statisticsRoute = "/statistics";
   static String settingsRoute = "/settings";
+  static String forgotPasswordRoute = "/forgotPassword";
 }

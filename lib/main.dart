@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:productivityplus/screens.dart/home_screen.dart';
 import 'package:productivityplus/screens.dart/login_screen.dart';
+import 'package:productivityplus/screens.dart/register_screen.dart';
 import 'package:productivityplus/utils/routes/routes.dart';
 
 void main() {
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
-      initialRoute: MyRoutes.loginRoute,
+      home: RegisterPage(),
+      initialRoute: MyRoutes.registerRoute,
       routes: {
         //"/": (context) => LoginPage(),
         MyRoutes.loginRoute: (context) => LoginPage(),

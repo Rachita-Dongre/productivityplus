@@ -15,6 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
 
+  //function to go to home page/screen
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
       setState(() {
@@ -22,6 +23,32 @@ class _LoginPageState extends State<LoginPage> {
       });
       await Future.delayed(const Duration(milliseconds: 150));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      setState(() {
+        changeButton = false;
+      });
+    }
+  }
+
+  //function to go to register page/screen
+  moveToRegister(BuildContext context) async {
+    // setState(() {
+    //   changeButton = true;
+    // });
+    // await Future.delayed(const Duration(milliseconds: 150));
+    Navigator.pushNamed(context, MyRoutes.registerRoute);
+    // setState(() {
+    //   changeButton = false;
+    // });
+  }
+
+  //function to go to forgpot password screen
+  moveToForgotPassword(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        changeButton = true;
+      });
+      await Future.delayed(const Duration(milliseconds: 150));
+      await Navigator.pushNamed(context, MyRoutes.forgotPasswordRoute);
       setState(() {
         changeButton = false;
       });
@@ -130,18 +157,18 @@ class _LoginPageState extends State<LoginPage> {
                                     ),
                             ),
                           ),
-
-                          // ElevatedButton(
-                          //   onPressed: () {
-                          //     Navigator.pushNamed(context, MyRoutes.homeRoute);
-                          //   },
-                          //   child: Text('Login'),
-                          // ),
                         ],
                       ),
                     ),
                     const Text('Forgot Password?'),
-                    const Text('Not registered yet? Register here!')
+                    InkWell(
+                      onTap: () => moveToRegister(context),
+                      child: Container(
+                        child: const Text(
+                          'Not registered yet? Register here!',
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

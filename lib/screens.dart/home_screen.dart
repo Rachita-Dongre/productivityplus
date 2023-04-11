@@ -11,9 +11,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Let's get productive!"),
+        title: const Text("Let's get productive!"),
       ),
-      body: Material(
+      body: const Material(
         child: Text('This is home page.'),
       ),
     );
