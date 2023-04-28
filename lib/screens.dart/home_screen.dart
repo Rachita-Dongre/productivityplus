@@ -1,8 +1,7 @@
 // home screen of app (appears after login)
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:productivityplus/Pomodoro/pomodoro.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,8 +12,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Let's get productive!"),
       ),
-      body: const Material(
-        child: Text('This is home page.'),
+      body: Material(
+        child: Column(
+          children: [
+            const Pomodoro(),
+            // BottomNavigationBar(items: items)
+          ],
+        ),
       ),
     );
   }
