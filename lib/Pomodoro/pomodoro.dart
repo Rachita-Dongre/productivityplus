@@ -58,7 +58,7 @@ class _PomodoroState extends State<Pomodoro> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(20.0),
             child: Text(
               "$activity",
               style: const TextStyle(
@@ -68,33 +68,42 @@ class _PomodoroState extends State<Pomodoro> {
             ),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 60.0,
           ),
-          CircularPercentIndicator(
-            radius: screenWidth * 0.17,
-            percent: percent,
-            animation: true,
-            animateFromLastPercent: true,
-            lineWidth: 20,
-            progressColor: Colors.white,
-            backgroundWidth: 50,
-            center: Text(
-              "$timeInMinute",
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 80.0,
+          Container(
+            child: CircularPercentIndicator(
+              radius: screenWidth * 0.30,
+              percent: percent,
+              animation: true,
+              animateFromLastPercent: true,
+              lineWidth: 20,
+              progressColor: Colors.white,
+              backgroundWidth: 20,
+              center: Text(
+                "$timeInMinute",
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 80.0,
+                ),
               ),
             ),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 100.0,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(0, 255, 255, 0),
-                foregroundColor: const Color.fromARGB(0, 0, 8, 255)),
-            onPressed: () {},
-            child: const Text('Start'),
+              backgroundColor: Color.fromARGB(255, 255, 255, 255),
+              foregroundColor: Color.fromARGB(255, 0, 136, 255),
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            ),
+            onPressed: () {
+              startTimer();
+            },
+            child: const Text(
+              'Start',
+              style: TextStyle(fontSize: 17.0),
+            ),
           ),
           const SizedBox(
             height: 20.0,
@@ -107,20 +116,34 @@ class _PomodoroState extends State<Pomodoro> {
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(0, 255, 255, 0),
-                      foregroundColor: const Color.fromARGB(0, 0, 8, 255)),
-                  onPressed: () {},
-                  child: const Text('Pause'),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    foregroundColor: Color.fromARGB(255, 0, 136, 255),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  ),
+                  onPressed: () {
+                    pauseTimer();
+                  },
+                  child: const Text(
+                    'Pause',
+                    style: TextStyle(fontSize: 17.0),
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(0, 255, 255, 0),
-                      foregroundColor: const Color.fromARGB(0, 0, 8, 255)),
-                  onPressed: () {},
-                  child: const Text('Reset'),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    foregroundColor: Color.fromARGB(255, 0, 136, 255),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  ),
+                  onPressed: () {
+                    resetTimer();
+                  },
+                  child: const Text(
+                    'Reset',
+                    style: TextStyle(fontSize: 17.0),
+                  ),
                 ),
               ),
             ],
@@ -130,14 +153,3 @@ class _PomodoroState extends State<Pomodoro> {
     );
   }
 }
-
-
-
-// Container(
-//         decoration: const BoxDecoration(
-//           gradient: LinearGradient(
-//             colors: [Color(0xff1542bf), Color(0xff51a8ff)],
-//             begin: FractionalOffset(0.5, 1),
-//           ),
-//         ),
-//         width: double.infinity,
