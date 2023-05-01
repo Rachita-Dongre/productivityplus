@@ -68,7 +68,7 @@ class _PomodoroState extends State<Pomodoro> {
             ),
           ),
           const SizedBox(
-            height: 60.0,
+            height: 15.0,
           ),
           Container(
             child: CircularPercentIndicator(
@@ -89,12 +89,12 @@ class _PomodoroState extends State<Pomodoro> {
             ),
           ),
           const SizedBox(
-            height: 100.0,
+            height: 50.0,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 255, 255, 255),
-              foregroundColor: Color.fromARGB(255, 0, 136, 255),
+              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+              foregroundColor: const Color.fromARGB(255, 0, 136, 255),
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             ),
             onPressed: () {
@@ -116,8 +116,8 @@ class _PomodoroState extends State<Pomodoro> {
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                    foregroundColor: Color.fromARGB(255, 0, 136, 255),
+                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    foregroundColor: const Color.fromARGB(255, 0, 136, 255),
                     padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   ),
                   onPressed: () {
@@ -133,8 +133,8 @@ class _PomodoroState extends State<Pomodoro> {
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                    foregroundColor: Color.fromARGB(255, 0, 136, 255),
+                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    foregroundColor: const Color.fromARGB(255, 0, 136, 255),
                     padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   ),
                   onPressed: () {

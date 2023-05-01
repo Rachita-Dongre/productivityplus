@@ -23,12 +23,12 @@ class HomePage extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.analytics),
-              label: 'Home',
+              label: 'Statistics',
               backgroundColor: Colors.blueAccent,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
-              label: 'Home',
+              label: 'Settings',
               backgroundColor: Colors.blueAccent,
             ),
           ],
