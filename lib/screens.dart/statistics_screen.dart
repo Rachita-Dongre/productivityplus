@@ -56,7 +56,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
           child: ListView(
             children: [
               Card(
-                color: Colors.white30,
+                color: Color.fromARGB(35, 0, 0, 255),
                 shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: Colors.white12,
@@ -64,14 +64,30 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 elevation: 15.0,
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "Here's the log of how you spend your time on the app. So that you can manage your time better and stay PRODUCTIVE!",
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.white,
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Track your time!",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Here's the log of your daily app use so that you can keep track of your time and be more productive !",
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -80,7 +96,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
               ),
               //daily log card
               Card(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 255, 255, 255),
                 shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: Colors.white30,
