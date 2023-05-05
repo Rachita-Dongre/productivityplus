@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:productivityplus/screens.dart/home_screen.dart';
 import 'package:productivityplus/screens.dart/login_screen.dart';
 import 'package:productivityplus/screens.dart/register_screen.dart';
+import 'package:productivityplus/screens.dart/settings_screen.dart';
 import 'package:productivityplus/screens.dart/statistics_screen.dart';
 import 'package:productivityplus/utils/routes/routes.dart';
 
@@ -15,8 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const StatisticsPage(),
-      initialRoute: MyRoutes.statisticsRoute,
+      home: const SettingsPage(),
+      initialRoute: MyRoutes.settingsRoute,
       routes: {
         //"/": (context) => LoginPage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.registerRoute: (context) => const RegisterPage(),
         // MyRoutes.emailVerificationRoute: (context) => EmailVerificationPage(),
         MyRoutes.statisticsRoute: (context) => const StatisticsPage(),
-        // MyRoutes.settingsRoute: (context) => SettingsPage(),
+        MyRoutes.settingsRoute: (context) => const SettingsPage(),
       },
     );
   }
