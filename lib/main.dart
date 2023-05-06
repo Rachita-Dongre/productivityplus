@@ -5,6 +5,7 @@ import 'package:productivityplus/screens.dart/register_screen.dart';
 import 'package:productivityplus/screens.dart/settings_screen.dart';
 import 'package:productivityplus/screens.dart/statistics_screen.dart';
 import 'package:productivityplus/utils/routes/routes.dart';
+import 'package:productivityplus/navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,14 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const SettingsPage(),
-      initialRoute: MyRoutes.settingsRoute,
+      home: const NavigationBarPage(),
+      initialRoute: MyRoutes.navigationBarPageRoute,
       routes: {
         //"/": (context) => LoginPage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
-        MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.registerRoute: (context) => const RegisterPage(),
         // MyRoutes.emailVerificationRoute: (context) => EmailVerificationPage(),
+        MyRoutes.navigationBarPageRoute: (context) => const NavigationBarPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.statisticsRoute: (context) => const StatisticsPage(),
         MyRoutes.settingsRoute: (context) => const SettingsPage(),
       },

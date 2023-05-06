@@ -28,37 +28,7 @@ class _HomePageState extends State<HomePage> {
           title: const Text("Let's get productive!"),
           backgroundColor: const Color.fromARGB(255, 21, 66, 191),
         ),
-        body: //IndexedStack(
-            //   //to navigate between screens
-            //   index: myIndex,
-            //   children: screenList,
-            // ),
-            const Material(child: Pomodoro()),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (index) {
-            setState(() {
-              myIndex = index;
-            });
-          },
-          currentIndex: myIndex,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Colors.blueAccent,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.analytics),
-              label: 'Statistics',
-              backgroundColor: Colors.blueAccent,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-              backgroundColor: Colors.blueAccent,
-            ),
-          ],
-        ),
+        body: const Material(child: Pomodoro()),
       ),
     );
   }

@@ -6,4 +6,5 @@ class MyRoutes {
   static String statisticsRoute = "/statistics";
   static String settingsRoute = "/settings";
   static String forgotPasswordRoute = "/forgotPassword";
+  static String navigationBarPageRoute = "/navigationBar";
 }
