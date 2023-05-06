@@ -1,7 +1,7 @@
 //settings page for the app.
 
 import 'package:flutter/material.dart';
-import 'package:productivityplus/screens.dart/statistics_screen.dart';
+import 'package:productivityplus/display_variables.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -11,9 +11,10 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  int pomodoroTime = 25;
-  int breakTime = 5;
-  int longBreakTime = 30;
+  // int pomodoroTime = 25;
+  // int breakTime = 5;
+  // int longBreakTime = 30;
+  // int dailyTarget = 8;
 
   @override
   Widget build(BuildContext context) {
@@ -346,12 +347,12 @@ class _SettingsPageState extends State<SettingsPage> {
                             ),
                           ),
                           const SizedBox(
-                            width: 35.0,
+                            width: 45.0,
                           ),
                           ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                pomodoroTime--;
+                                dailyTarget--;
                               });
                             },
                             child: const Icon(Icons.minimize),
@@ -360,7 +361,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             width: 15.0,
                           ),
                           Text(
-                            "$pomodoroTime",
+                            "$dailyTarget",
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 15.0),
                           ),
@@ -370,7 +371,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                pomodoroTime++;
+                                dailyTarget++;
                               });
                             },
                             child: const Icon(Icons.add),
@@ -388,19 +389,3 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 }
-
-// color: const Color.fromARGB(255, 255, 255, 255),
-//                   shape: RoundedRectangleBorder(
-//                     side: const BorderSide(
-//                       color: Colors.white30,
-//                     ),
-//                     borderRadius: BorderRadius.circular(20),
-//                   ),
-//                   elevation: 15.0,
-
-// decoration: const BoxDecoration(
-//                   gradient: LinearGradient(
-//                     colors: [Color(0xff1542bf), Color(0xff51a8ff)],
-//                     begin: FractionalOffset(0.5, 1),
-//                   ),
-//                 ),

@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class Pomodoro extends StatefulWidget {
@@ -12,10 +15,21 @@ class _PomodoroState extends State<Pomodoro> {
   double percent = 0;
   static int timeInMinute = 25;
   int timeInSec = timeInMinute * 60;
-  String activity = 'Pomodoro';
+  String activity = '';
 
-  //start timer function
-  void startTimer() {}
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  //start pomodoro timer function
+  void startPomodoroTimer() {}
+
+  //start short break timer function
+  void startShortBreakTimer() {}
+
+  //start long break timer function
+  void startLongBreakTimer() {}
 
   //stop timer function
   void stopTimer() {}
@@ -78,6 +92,7 @@ class _PomodoroState extends State<Pomodoro> {
               animateFromLastPercent: true,
               lineWidth: 20,
               progressColor: Colors.white,
+              backgroundColor: Colors.blueAccent,
               backgroundWidth: 20,
               center: Text(
                 "$timeInMinute",
@@ -98,7 +113,7 @@ class _PomodoroState extends State<Pomodoro> {
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             ),
             onPressed: () {
-              startTimer();
+              startPomodoroTimer();
             },
             child: const Text(
               'Start',

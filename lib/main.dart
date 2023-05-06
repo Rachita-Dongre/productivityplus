@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const NavigationBarPage(),
+      //theme: ThemeData.dark(),
       initialRoute: MyRoutes.navigationBarPageRoute,
       routes: {
         //"/": (context) => LoginPage(),

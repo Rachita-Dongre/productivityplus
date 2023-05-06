@@ -1,6 +1,7 @@
 //statistics screen containing all app use stats of the user
 
 import 'package:flutter/material.dart';
+import 'package:productivityplus/display_variables.dart';
 
 ///
 /**
@@ -33,10 +34,10 @@ class StatisticsPage extends StatefulWidget {
 class _StatisticsPageState extends State<StatisticsPage> {
   @override
   Widget build(BuildContext context) {
-    String achievedOrNot = 'Achieved';
-    int pomodoroSessionsCompleted = 0;
-    int effectiveWorkTime = 0;
-    int breakTime = 0;
+    // String achievedOrNot = 'Achieved';
+    // int pomodoroSessionsCompleted = 0;
+    // int effectiveWorkTime = 0;
+    // int breakTime = 0;
 
     return Scaffold(
       appBar: AppBar(
@@ -261,7 +262,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                   width: 140.0,
                                 ),
                                 Text(
-                                  '$breakTime hr',
+                                  '$effectivebreakTime hr',
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
@@ -438,7 +439,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                   width: 140.0,
                                 ),
                                 Text(
-                                  '$breakTime hr',
+                                  '$effectivebreakTime hr',
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
@@ -615,7 +616,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                   width: 140.0,
                                 ),
                                 Text(
-                                  '$breakTime hr',
+                                  '$effectivebreakTime hr',
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,

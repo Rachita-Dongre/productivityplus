@@ -52,7 +52,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                 ))
             .toList(),
       ),
-      body: _buildBody[index],
+      body: IndexedStack(index: index, children: _buildBody),
     );
   }
 }
