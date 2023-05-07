@@ -9,3 +9,6 @@ String achievedOrNot = 'Achieved';
 int pomodoroSessionsCompleted = 0;
 int effectiveWorkTime = 0;
 int effectivebreakTime = 0;
+
+//pomodoro screen variables
+String displayactivity = '';
