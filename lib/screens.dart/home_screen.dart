@@ -13,12 +13,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int myIndex = 0;
-  List<Widget> screenList = const [
-    HomePage(),
-    StatisticsPage(),
-    SettingsPage(),
-  ];
+  //int myIndex = 0;
+  // List<Widget> screenList = const [
+  //   HomePage(),
+  //   StatisticsPage(),
+  //   SettingsPage(),
+  // ];
 
   @override
   Widget build(BuildContext context) {
