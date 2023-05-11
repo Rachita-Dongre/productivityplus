@@ -1,5 +1,5 @@
 //settings screen variables
-int pomodoroTime = 25;
+int pomodoroTime = 2;
 int breakTime = 5;
 int longBreakTime = 30;
 int dailyTarget = 8;

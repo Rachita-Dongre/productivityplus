@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:productivityplus/display_variables.dart';
+import 'package:productivityplus/Pomodoro/pomodoro.dart';
 
 class PomodoroTimer extends StatefulWidget {
   const PomodoroTimer({super.key});
@@ -11,7 +12,7 @@ class PomodoroTimer extends StatefulWidget {
 
 class _PomodoroTimerState extends State<PomodoroTimer> {
   int duration = pomodoroTime;
-  final CountDownController _controller = CountDownController();
+  final CountDownController controller = CountDownController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class _PomodoroTimerState extends State<PomodoroTimer> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Center(
       child: CircularCountDownTimer(
-        controller: _controller,
+        controller: controller,
         width: screenWidth * 0.60,
         height: screenHeight * 0.35,
         duration: duration,
@@ -45,6 +46,23 @@ class _PomodoroTimerState extends State<PomodoroTimer> {
             style: TextStyle(fontSize: 20.0, color: Colors.white),
           );
         },
+      ),
+    );
+  }
+
+  Widget button({required String title, VoidCallback? onPressed}) {
+    return Expanded(
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+          foregroundColor: const Color.fromARGB(255, 0, 136, 255),
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+        ),
+        onPressed: onPressed,
+        child: Text(
+          title,
+          style: const TextStyle(color: Colors.white, fontSize: 17.0),
+        ),
       ),
     );
   }

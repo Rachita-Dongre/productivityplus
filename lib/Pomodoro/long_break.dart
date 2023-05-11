@@ -11,7 +11,7 @@ class LongBreakTimer extends StatefulWidget {
 
 class _LongBreakTimerState extends State<LongBreakTimer> {
   int duration = longBreakTime;
-  final CountDownController _controller = CountDownController();
+  final CountDownController controller = CountDownController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _LongBreakTimerState extends State<LongBreakTimer> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Center(
       child: CircularCountDownTimer(
-        controller: _controller,
+        controller: controller,
         width: screenWidth * 0.60,
         height: screenHeight * 0.60,
         duration: duration,

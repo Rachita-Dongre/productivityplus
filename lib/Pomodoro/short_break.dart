@@ -11,7 +11,7 @@ class ShortBreakTimer extends StatefulWidget {
 
 class _ShortBreakTimerState extends State<ShortBreakTimer> {
   int duration = breakTime;
-  final CountDownController _controller = CountDownController();
+  final CountDownController controller = CountDownController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _ShortBreakTimerState extends State<ShortBreakTimer> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Center(
       child: CircularCountDownTimer(
-        controller: _controller,
+        controller: controller,
         width: screenWidth * 0.60,
         height: screenHeight * 0.60,
         duration: duration,
