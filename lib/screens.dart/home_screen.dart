@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:productivityplus/Pomodoro/pomodoro.dart';
-import 'package:productivityplus/screens.dart/settings_screen.dart';
-import 'package:productivityplus/screens.dart/statistics_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,13 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //int myIndex = 0;
-  // List<Widget> screenList = const [
-  //   HomePage(),
-  //   StatisticsPage(),
-  //   SettingsPage(),
-  // ];
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
