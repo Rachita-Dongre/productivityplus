@@ -38,6 +38,10 @@ dependencies:
   font_awesome_flutter: ^10.4.0
   circular_countdown_timer: ^0.2.3
   neon_circular_timer: ^0.0.7
+  firebase_core: ^2.18.0
+  firebase_auth: ^4.11.0
+  cloud_firestore: ^4.10.0
+  firebase_analytics: ^10.6.0
 
 dev_dependencies:
   flutter_test:

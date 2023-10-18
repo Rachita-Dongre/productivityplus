@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:productivityplus/Pomodoro/long_break.dart';
-import 'package:productivityplus/Pomodoro/pomodoro_timer.dart';
-import 'package:productivityplus/Pomodoro/short_break.dart';
-import 'package:productivityplus/display_variables.dart';
 import 'package:neon_circular_timer/neon_circular_timer.dart';
+import 'package:productivityplus/Pomodoro/pomodoro_timer.dart';
+import 'package:productivityplus/display_variables.dart';
 
 class Pomodoro extends StatefulWidget {
   const Pomodoro({super.key});
