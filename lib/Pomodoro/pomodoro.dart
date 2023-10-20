@@ -1,8 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:neon_circular_timer/neon_circular_timer.dart';
+import 'package:productivityplus/Pomodoro/pomodoro_timer.dart';
+import 'package:productivityplus/display_variables.dart';
 
 class Pomodoro extends StatefulWidget {
   const Pomodoro({super.key});
@@ -12,44 +11,14 @@ class Pomodoro extends StatefulWidget {
 }
 
 class _PomodoroState extends State<Pomodoro> {
-  double percent = 0;
-  static int timeInMinute = 25;
-  int timeInSec = timeInMinute * 60;
-  String activity = '';
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  //start pomodoro timer function
-  void startPomodoroTimer() {}
-
-  //start short break timer function
-  void startShortBreakTimer() {}
-
-  //start long break timer function
-  void startLongBreakTimer() {}
-
-  //stop timer function
-  void stopTimer() {}
-
-  //pause timer function
-  void pauseTimer() {}
-
-  //reset timer function
-  void resetTimer() {}
-
-  //is timer running
-  // bool isTimerRunning() {
-  //   //condition to check if the timer is running or not
-  //   if()
-  //   {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
+  // static int timeInMinute = pomodoroTime;
+  // String activity = displayactivity;
+  // //pomodoro timer variables
+  // int duration = timeInMinute;
+  // final isRunning = timeInMinute > 0;
+  // final isComplete = timeInMinute == 0;
+  //neon countdown controller
+  final CountDownController controller = CountDownController();
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +43,7 @@ class _PomodoroState extends State<Pomodoro> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              "$activity",
+              "$displayactivity",
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 30.0,
@@ -84,85 +53,12 @@ class _PomodoroState extends State<Pomodoro> {
           const SizedBox(
             height: 15.0,
           ),
-          Container(
-            child: CircularPercentIndicator(
-              radius: screenWidth * 0.30,
-              percent: percent,
-              animation: true,
-              animateFromLastPercent: true,
-              lineWidth: 20,
-              progressColor: Colors.white,
-              backgroundColor: Colors.blueAccent,
-              backgroundWidth: 20,
-              center: Text(
-                "$timeInMinute",
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 80.0,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 50.0,
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-              foregroundColor: const Color.fromARGB(255, 0, 136, 255),
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-            ),
-            onPressed: () {
-              startPomodoroTimer();
-            },
-            child: const Text(
-              'Start',
-              style: TextStyle(fontSize: 17.0),
-            ),
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    foregroundColor: const Color.fromARGB(255, 0, 136, 255),
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  ),
-                  onPressed: () {
-                    pauseTimer();
-                  },
-                  child: const Text(
-                    'Pause',
-                    style: TextStyle(fontSize: 17.0),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    foregroundColor: const Color.fromARGB(255, 0, 136, 255),
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  ),
-                  onPressed: () {
-                    resetTimer();
-                  },
-                  child: const Text(
-                    'Reset',
-                    style: TextStyle(fontSize: 17.0),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          //PomodoroTimer,
+          const PomodoroTimer(),
+          //short break timer
+          //const ShortBreakTimer(),
+          //long break timer
+          //const LongBreakTimer(),
         ],
       ),
     );
